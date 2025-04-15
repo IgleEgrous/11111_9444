@@ -9,7 +9,7 @@ def validate():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Define directory for magnification "200" validation data
-    val_dir = "ColHis-IDS_split/val/200"
+    val_dir = "./EBH-HE-IDS/ColHis-IDS_split/val/200"
 
     # Define transformations for validation (only resizing and normalization)
     val_transforms = transforms.Compose([
@@ -30,7 +30,7 @@ def validate():
 
     num_classes = len(val_dataset.classes)
     model.classifier[6] = nn.Linear(model.classifier[6].in_features, num_classes)
-    model.load_state_dict(torch.load("vgg16_model_magnification200.pth", map_location=device))
+    model.load_state_dict(torch.load("best_model.pth", map_location=device))
     model = model.to(device)
     model.eval()
 
