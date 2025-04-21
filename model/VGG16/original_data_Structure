@@ -1,0 +1,25 @@
+EBHI/
+├── Normal/            #  The images are divided into five categories: Normal, Polyp, Low-grade IN, High-grade IN, and Adenocarcinoma.
+│   ├── Case001/               # Number of images
+│   │   ├── 40/                   # Magnification level
+│   │   │   └── img1.png
+│   │   ├── 100/
+│   │   │   └── img2.png
+│   │   ├── 200/
+│   │   │   └── img3.png
+│   │   └── 400/
+│   │       └── img4.png
+│   ├── Case002/
+│   │   └── ...
+├── Polyp/
+│   ├── Case010/
+│   │   ├── 40/
+│   │   ├── 100/
+│   │   ├── 200/
+│   │   └── 400/
+├── StageI/
+│   └── ...
+├── StageII/
+│   └── ...
+└── StageIII/
+    └── ...
